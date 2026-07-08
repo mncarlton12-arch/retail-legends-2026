@@ -1,0 +1,134 @@
+/* ============================================================
+   RETAIL LEGENDS — page personality
+   Premium · intimate · executive · warm. A curated room,
+   not a conference floor. Dark serif hero, candlelight warmth.
+   ============================================================ */
+
+:root {
+  --accent: var(--terracotta);
+  --accent-d: var(--terracotta-d);
+}
+
+.center { text-align: center; }
+.center .section__sub { margin-inline: auto; }
+
+.eyebrow--light { color: color-mix(in srgb, var(--terracotta) 80%, #fff); }
+
+/* ---------------- Hero ---------------- */
+.hero {
+  position: relative;
+  background: radial-gradient(130% 150% at 50% -10%, #2e2b3f 0%, var(--navy) 58%);
+  color: var(--offwhite);
+  text-align: center;
+  padding: 96px 0 110px;
+  overflow: hidden;
+}
+.hero__glow {
+  position: absolute; inset: auto -20% -55% -20%; height: 400px;
+  background: radial-gradient(60% 100% at 50% 100%, rgba(184,115,80,.34), transparent 70%);
+  pointer-events: none;
+}
+.hero__inner { position: relative; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.hero__title {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(2.6rem, 9vw, 4.6rem);
+  letter-spacing: .01em;
+}
+.hero__title em { font-style: italic; color: var(--terracotta); }
+.hero__sub {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 3vw, 1.35rem);
+  font-weight: 400;
+  color: var(--muted-light);
+  max-width: 34ch;
+}
+.hero__meta {
+  font-size: .95rem; font-weight: 600; letter-spacing: .06em;
+  color: var(--offwhite);
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 14px;
+}
+.hero__meta .dot { color: var(--terracotta); }
+.hero__ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 8px; }
+.hero__theme {
+  margin-top: 26px;
+  font-family: var(--font-serif); font-style: italic;
+  color: color-mix(in srgb, var(--muted-light) 80%, var(--terracotta));
+  font-size: 1rem;
+}
+
+/* Join between dark hero and first light section */
+.section--darkjoin { padding-top: 72px; }
+
+.lead { font-size: 1.08rem; color: var(--ink); max-width: 60ch; }
+
+/* ---------------- What we'll explore ---------------- */
+.quad { display: grid; gap: 14px; margin-top: 10px; }
+@media (min-width: 640px) { .quad { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 980px) { .quad { grid-template-columns: repeat(4, 1fr); } }
+.quad__panel {
+  background: var(--white);
+  border: 1px solid rgba(25,25,36,.08);
+  border-top: 3px solid var(--terracotta);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .18s ease, box-shadow .22s ease;
+}
+.quad__panel:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
+.quad__title { font-family: var(--font-serif); font-weight: 600; font-size: 1.08rem; margin-bottom: 6px; }
+.quad__body { color: var(--muted); font-size: .92rem; }
+
+/* ---------------- The Evening — expandable agenda ---------------- */
+.agenda { display: grid; gap: 10px; }
+.agenda details {
+  background: var(--white);
+  border: 1px solid rgba(25,25,36,.08);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: box-shadow .2s ease;
+}
+.agenda details[open] { box-shadow: var(--shadow); }
+.agenda summary {
+  display: flex; align-items: center; gap: 14px;
+  padding: 16px 18px;
+  cursor: pointer;
+  font-weight: 600; color: var(--navy);
+  list-style: none;
+}
+.agenda summary::-webkit-details-marker { display: none; }
+.agenda summary:hover { background: rgba(184,115,80,.05); }
+.agenda .agenda__idx {
+  flex: none; width: 30px; height: 30px; border-radius: 50%;
+  display: grid; place-items: center;
+  background: color-mix(in srgb, var(--terracotta) 14%, transparent);
+  color: var(--terracotta-d);
+  font-family: var(--font-serif); font-size: .9rem; font-weight: 700;
+}
+.agenda .agenda__chev { margin-left: auto; color: var(--muted); transition: transform .25s ease; }
+.agenda details[open] .agenda__chev { transform: rotate(180deg); }
+.agenda .agenda__detail { padding: 0 18px 16px 62px; color: var(--muted); font-size: .95rem; }
+
+/* ---------------- Sponsors ---------------- */
+.sponsors--center .sponsors { justify-content: center; }
+.sponsor__line { color: var(--muted); max-width: 52ch; margin: 20px auto 22px; font-size: .95rem; }
+
+/* ---------------- Quote band ---------------- */
+.quoteband {
+  background: linear-gradient(160deg, var(--navy) 0%, #262336 100%);
+  color: var(--offwhite);
+  text-align: center;
+  padding: 84px 0;
+}
+.quoteband__quote {
+  font-family: var(--font-serif); font-style: italic; font-weight: 500;
+  font-size: clamp(1.35rem, 4vw, 1.9rem);
+  color: var(--offwhite);
+  margin-bottom: 16px;
+}
+.quoteband__msg { color: var(--muted-light); max-width: 52ch; margin: 0 auto 26px; }
+
+/* Speaker cards a touch more formal on this page */
+.execcard { flex-basis: 250px; }
+.execcard__photo, .execcard__avatar { width: 108px; height: 108px; }
