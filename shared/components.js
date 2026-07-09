@@ -116,6 +116,43 @@
     mount.append(region);
     sync();
     requestAnimationFrame(sync);
+
+    /* Optional continuous motion: <div data-carousel="..." data-carousel-auto>.
+       Slow marquee drift; pauses on hover/focus/touch and for a few seconds
+       after any manual interaction; disabled under prefers-reduced-motion. */
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (mount.hasAttribute("data-carousel-auto") && !reduce && track.scrollWidth > track.clientWidth) {
+      // Clone the cards once so the loop wraps seamlessly. Clones are
+      // decorative — hidden from the accessibility tree.
+      const firstOriginal = track.children[0];
+      [...track.children].forEach((li) => {
+        const clone = li.cloneNode(true);
+        clone.setAttribute("aria-hidden", "true");
+        track.append(clone);
+      });
+      // Exact loop length: distance from the first original to its clone.
+      const firstClone = track.children[people.length];
+      const wrapWidth = firstClone.offsetLeft - firstOriginal.offsetLeft;
+      let hovered = false, focused = false, pauseUntil = 0, last = null;
+      const bump = () => { pauseUntil = performance.now() + 4000; };
+      track.addEventListener("pointerenter", () => { hovered = true; });
+      track.addEventListener("pointerleave", () => { hovered = false; });
+      region.addEventListener("focusin", () => { focused = true; });
+      region.addEventListener("focusout", () => { focused = false; });
+      track.addEventListener("wheel", bump, { passive: true });
+      track.addEventListener("touchstart", bump, { passive: true });
+      prev.addEventListener("click", bump);
+      next.addEventListener("click", bump);
+      const SPEED = 28; // px per second — a calm drift
+      (function drift(t) {
+        if (last !== null && !hovered && !focused && t > pauseUntil && !document.hidden) {
+          track.scrollLeft += (SPEED * (t - last)) / 1000;
+          if (track.scrollLeft >= wrapWidth) track.scrollLeft -= wrapWidth;
+        }
+        last = t;
+        requestAnimationFrame(drift);
+      })(performance.now());
+    }
   });
 
   /* ---------------- sponsors ---------------- */
