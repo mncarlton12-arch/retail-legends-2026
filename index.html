@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Retail Legends · An Evening with the Architects of Modern Retail — SEN</title>
-  <meta name="description" content="Retail Legends — an intimate fireside conversation with Terry Lundgren (former Chairman & CEO, Macy's) and Lew Frankfort (former Chairman & CEO, Coach), plus a third legend to be announced. September 15, 2026, New York City. Presented by The Social Executive Network." />
+  <meta name="description" content="Retail Legends — an intimate fireside conversation with Terry Lundgren (former Chairman & CEO, Macy's) and Lew Frankfort (former Chairman & CEO, Coach). September 15, 2026, New York City. Presented by The Social Executive Network." />
 
   <!-- Social share preview.
        TODO after deploy: replace og:image/og:url with the absolute production
@@ -75,8 +75,20 @@
       <div class="container">
         <p class="eyebrow reveal">In Conversation</p>
         <h2 class="section__title reveal" id="legends-h">The Legends</h2>
-        <p class="section__sub reveal">Two names that defined an era of American retail — and a third voice still to be revealed.</p>
-        <div data-carousel="retailLegends.speakers" data-carousel-label="Retail Legends speakers" class="reveal"></div>
+        <p class="section__sub reveal">Two names that defined an era of American retail.</p>
+        <div class="profiles" id="legend-profiles"><!-- featured speaker profiles from config --></div>
+      </div>
+    </section>
+
+    <!-- ===================== BRANDS IN THE ROOM ===================== -->
+    <section class="section" aria-labelledby="room-h">
+      <div class="container">
+        <p class="eyebrow reveal">In the Room</p>
+        <h2 class="section__title reveal" id="room-h">The Brands in the Room</h2>
+        <p class="section__sub reveal">
+          Executives representing these brands are attending Retail Legends.
+        </p>
+        <ul class="brandwall reveal" id="brand-wall"><!-- brand marks from config --></ul>
       </div>
     </section>
 

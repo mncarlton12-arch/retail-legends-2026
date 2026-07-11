@@ -65,6 +65,10 @@ window.SEN_CONFIG = {
     audience: "A curated room of senior retail and commerce executives",
     format: "Fireside conversation, then cocktails, hors d'oeuvres, networking and a book signing",
 
+    /* Featured speakers. CONFIRMED by Maria (July 8, 2026): Terry and Lew ONLY
+       are featured — the earlier "third legend TBA" card is removed and must
+       not return without her say-so. Each profile carries the speaker's brand
+       wordmark under the photo. */
     speakers: [
       {
         name: "Terry Lundgren",
@@ -73,7 +77,9 @@ window.SEN_CONFIG = {
         status: "confirmed",
         image: "assets/execs/terry-lundgren.png", // see assets/execs/SOURCES.md
         imageAlt: "Portrait of Terry Lundgren, former Chairman and CEO of Macy's, Inc.",
-        descriptor: "Led Macy's through its defining modern era.",
+        brandName: "Macy's",
+        brandLogo: "assets/brands/macys.svg",
+        bio: "Terry Lundgren led Macy's, Inc. as Chairman & CEO for more than a decade, steering the landmark merger of Federated and May Department Stores and shaping Macy's into America's flagship department store. He previously served as Chairman & CEO of Neiman Marcus and twice chaired the National Retail Federation.",
         link: null, // TODO: optional LinkedIn/company link
         source: "Recap doc: confirmed May 27 · name known · headshot verified (Speakers Associates)",
       },
@@ -84,23 +90,40 @@ window.SEN_CONFIG = {
         status: "confirmed",
         image: "assets/execs/lew-frankfort.jpg",
         imageAlt: "Portrait of Lew Frankfort, former Chairman and CEO of Coach",
-        descriptor: "Built Coach into a global house of modern luxury.",
+        brandName: "Coach",
+        brandLogo: "assets/brands/coach.svg",
+        bio: "Over more than three decades as Chairman & CEO, Lew Frankfort built Coach from a small family leather workshop into a global house of modern luxury — taking the company public in 2000 and authoring one of the most studied brand transformations in retail history.",
         link: null,
         source: "Recap doc: verbally confirmed (written confirmation pending via Mike Taylor) · name known — already public on the live retail-legends hub · headshot verified (lewfrankfort.com)",
       },
-      {
-        // Third speaker intentionally unnamed — proposed internally but NOT
-        // confirmed. Do not add a name here until confirmed with Terry/BB.
-        name: null,
-        title: "A Third Legend",
-        company: "Pending confirmation",
-        status: "tba",
-        image: null, // renders SEN-branded placeholder avatar
-        imageAlt: "SEN placeholder avatar — additional speaker pending confirmation",
-        descriptor: "Announcement coming soon.",
-        link: null,
-        source: "Recap doc: proposed only, NOT confirmed · name TBD (do not publish) · placeholder avatar",
-      },
+    ],
+
+    /* Brands in the Room — brands whose executives are attending.
+       List provided by Maria, July 8 2026. `logo` null = elegant typographic
+       wordmark fallback renders instead; see assets/brands/SOURCES.md.
+       TODO: "Flaherty" spelling unconfirmed — no major retail brand by that
+       exact name; possibly the apparel brand "Faherty". Confirm with Maria/BB. */
+    brands: [
+      { name: "Macy's",                 logo: "assets/brands/macys.svg" },
+      { name: "Coach",                  logo: "assets/brands/coach.svg" },
+      { name: "Tarte Cosmetics",        logo: "assets/brands/tarte.svg" },
+      { name: "G-Star RAW",             logo: "assets/brands/g-star-raw.svg" },
+      { name: "Saatva",                 logo: null },
+      { name: "David Yurman",           logo: "assets/brands/david-yurman.svg" },
+      { name: "Bottega Veneta",         logo: null },
+      { name: "Under Armour",           logo: "assets/brands/under-armour.svg" },
+      { name: "Centric Brands",         logo: null },
+      { name: "Tapestry",               logo: "assets/brands/tapestry.svg" },
+      { name: "L'Oréal",                logo: "assets/brands/loreal.svg" },
+      { name: "Flaherty",               logo: null }, // TODO: confirm brand name (Faherty?)
+      { name: "Marriott International", logo: "assets/brands/marriott.svg" },
+      { name: "Chanel",                 logo: "assets/brands/chanel.svg" },
+      { name: "CVS",                    logo: "assets/brands/cvs.svg" },
+      { name: "Kering",                 logo: null },
+      { name: "Versace",                logo: "assets/brands/versace.svg" },
+      { name: "Brooklinen",             logo: null },
+      { name: "Steve Madden",           logo: null },
+      { name: "American Eagle",         logo: null },
     ],
 
     themes: [

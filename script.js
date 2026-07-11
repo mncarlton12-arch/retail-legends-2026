@@ -18,6 +18,53 @@
   const theme = document.getElementById("hero-theme");
   if (theme) theme.textContent = "“" + RL.theme + "”";
 
+  /* Typographic fallback used when a brand logo file is absent/missing */
+  function brandMark(logo, name, imgClass, textClass) {
+    if (!logo) {
+      const t = document.createElement("span");
+      t.className = textClass; t.textContent = name;
+      return t;
+    }
+    const img = document.createElement("img");
+    img.className = imgClass; img.src = logo;
+    img.alt = name + " logo";
+    img.addEventListener("error", () => {
+      const t = document.createElement("span");
+      t.className = textClass; t.textContent = name;
+      img.replaceWith(t);
+    });
+    return img;
+  }
+
+  /* Featured speaker profiles (Terry & Lew — confirmed lineup) */
+  const profiles = document.getElementById("legend-profiles");
+  if (profiles) {
+    RL.speakers.forEach((s) => {
+      const card = document.createElement("article");
+      card.className = "profile reveal";
+      card.innerHTML = `
+        <img class="profile__photo" src="${esc(s.image)}" alt="${esc(s.imageAlt)}" loading="lazy" />
+        <h3 class="profile__name">${esc(s.name)}</h3>
+        <p class="profile__title">${esc(s.title)}, ${esc(s.company)}</p>
+        <p class="profile__bio">${esc(s.bio)}</p>`;
+      card.insertBefore(
+        brandMark(s.brandLogo, s.brandName || s.company, "profile__brand", "profile__brandtext"),
+        card.querySelector(".profile__bio"));
+      profiles.append(card);
+    });
+  }
+
+  /* Brands in the room — logo wall with typographic fallback */
+  const wall = document.getElementById("brand-wall");
+  if (wall && RL.brands) {
+    RL.brands.forEach((b) => {
+      const li = document.createElement("li");
+      li.className = "brandwall__item";
+      li.append(brandMark(b.logo, b.name, "", "brandwall__text"));
+      wall.append(li);
+    });
+  }
+
   /* What we'll explore */
   const grid = document.getElementById("themes-grid");
   if (grid) {
