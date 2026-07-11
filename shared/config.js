@@ -106,7 +106,7 @@ window.SEN_CONFIG = {
     brands: [
       { name: "Macy's",                 logo: "assets/brands/macys.svg" },
       { name: "Coach",                  logo: "assets/brands/coach.svg" },
-      { name: "Tarte Cosmetics",        logo: "assets/brands/tarte.svg" },
+      { name: "Tarte Cosmetics",        logo: null }, // fetched file was a wrong mark — renders as wordmark until a verified logo lands
       { name: "G-Star RAW",             logo: "assets/brands/g-star-raw.svg" },
       { name: "Saatva",                 logo: null },
       { name: "David Yurman",           logo: "assets/brands/david-yurman.svg" },
@@ -114,7 +114,7 @@ window.SEN_CONFIG = {
       { name: "Under Armour",           logo: "assets/brands/under-armour.svg" },
       { name: "Centric Brands",         logo: null },
       { name: "Tapestry",               logo: "assets/brands/tapestry.svg" },
-      { name: "L'Oréal",                logo: "assets/brands/loreal.svg" },
+      { name: "L'Oréal",                logo: null }, // fetched file was a map graphic, not the wordmark — renders as wordmark text until a verified logo lands
       { name: "Flaherty",               logo: null }, // TODO: confirm brand name (Faherty?)
       { name: "Marriott International", logo: "assets/brands/marriott.svg" },
       { name: "Chanel",                 logo: "assets/brands/chanel.svg" },
