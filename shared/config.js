@@ -99,10 +99,9 @@ window.SEN_CONFIG = {
     ],
 
     /* Brands in the Room — brands whose executives are attending.
-       List provided by Maria, July 8 2026. `logo` null = elegant typographic
-       wordmark fallback renders instead; see assets/brands/SOURCES.md.
-       TODO: "Flaherty" spelling unconfirmed — no major retail brand by that
-       exact name; possibly the apparel brand "Faherty". Confirm with Maria/BB. */
+       List provided by Maria, July 8 2026 ("Flaherty" corrected to Faherty
+       July 12). `logo` null = elegant typographic wordmark fallback renders
+       instead; see assets/brands/SOURCES.md. */
     brands: [
       { name: "Macy's",                 logo: "assets/brands/macys.svg" },
       { name: "Coach",                  logo: "assets/brands/coach.svg" },
