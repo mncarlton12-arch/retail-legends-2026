@@ -23,6 +23,8 @@ at the same filename to update the site.
 macys.svg and coach.svg are also featured under the Terry Lundgren and
 Lew Frankfort speaker profiles.
 
+| faherty.png | fahertybrand.com/cdn/shop/files/Faherty-Logo.png (official site header wordmark; visually verified July 12 2026) |
+
 ## Rendering as typographic wordmarks (no verified logo yet)
 
 Tarte Cosmetics, Saatva, Bottega Veneta, Centric Brands, Kering, L'Oréal,
@@ -37,6 +39,5 @@ and the Wikiversity logo as both "brooklinen" and "centric-brands". All four
 deleted — never re-add a logo without visually confirming it is the brand's
 actual mark.
 
-- TODO: "Flaherty" — brand name unconfirmed (no major retail brand by that
-  exact spelling; possibly the apparel brand "Faherty"). Confirm with Maria/BB
-  before sourcing a logo; renders as text meanwhile.
+- RESOLVED July 12: "Flaherty" was a misspelling of **Faherty** (confirmed by
+  Maria); official wordmark sourced from fahertybrand.com (faherty.png).

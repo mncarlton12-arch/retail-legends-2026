@@ -115,7 +115,7 @@ window.SEN_CONFIG = {
       { name: "Centric Brands",         logo: null },
       { name: "Tapestry",               logo: "assets/brands/tapestry.svg" },
       { name: "L'Oréal",                logo: null }, // fetched file was a map graphic, not the wordmark — renders as wordmark text until a verified logo lands
-      { name: "Flaherty",               logo: null }, // TODO: confirm brand name (Faherty?)
+      { name: "Faherty",                logo: "assets/brands/faherty.png" }, // confirmed by Maria July 12 ("Flaherty" was a misspelling)
       { name: "Marriott International", logo: "assets/brands/marriott.svg" },
       { name: "Chanel",                 logo: "assets/brands/chanel.svg" },
       { name: "CVS",                    logo: "assets/brands/cvs.svg" },
