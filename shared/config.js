@@ -40,7 +40,9 @@ window.SEN_CONFIG = {
      Final CTAs are on hold — these are the practical, editable defaults.   */
   ctas: {
     visitSen:            { label: "Visit SEN",               url: "https://www.socialexec.co/" },
-    sponsor:             { label: "Sponsor Opportunities",   url: "mailto:partnerships@socialexecutivenetwork.com?subject=SEN%20Sponsor%20Opportunities" },
+    // Sponsor inquiries route to the SEN website's partnerships page
+    // (sponsor tiers + inquiry CTAs). Updated from the mailto per Maria, July 12.
+    sponsor:             { label: "Sponsor Opportunities",   url: "https://www.socialexec.co/partnerships" },
     retailLegendsLuma:   { label: "Retail Legends on Luma",  url: "https://luma.com/96gvc9ig" },
     expoInfo:            { label: "eCommerce Expo Event Info", url: "https://www.ecommerceexpo.co.uk/" },
     // TODO: Happy hour Luma page not created yet (internally: "Luma TBD").
@@ -65,10 +67,10 @@ window.SEN_CONFIG = {
     audience: "A curated room of senior retail and commerce executives",
     format: "Fireside conversation, then cocktails, hors d'oeuvres, networking and a book signing",
 
-    /* Featured speakers. CONFIRMED by Maria (July 8, 2026): Terry and Lew ONLY
-       are featured — the earlier "third legend TBA" card is removed and must
-       not return without her say-so. Each profile carries the speaker's brand
-       wordmark under the photo. */
+    /* Featured speakers. CONFIRMED by Maria (July 8, re-confirmed July 12,
+       2026): Terry and Lew ONLY — even though some designer cards show a
+       third speaker, do NOT add one without her say-so. Each profile carries
+       the speaker's brand wordmark under the photo. */
     speakers: [
       {
         name: "Terry Lundgren",

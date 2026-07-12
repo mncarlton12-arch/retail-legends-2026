@@ -252,7 +252,7 @@
         <p class="footer__name">Presented by ${esc(C.sen.name)}</p>
         <nav class="footer__links" aria-label="SEN links">
           <a href="${esc(C.sen.website)}" target="_blank" rel="noopener">Visit SEN</a>
-          <a href="mailto:${esc(C.sen.partnershipsEmail)}">Sponsor Opportunities</a>
+          <a href="${esc((C.ctas.sponsor && C.ctas.sponsor.url) || "mailto:" + C.sen.partnershipsEmail)}" target="_blank" rel="noopener">Sponsor Opportunities</a>
           <a href="https://retail-legends-2026.vercel.app/">Retail Legends</a>
           <a href="https://sen-ecommerce-expo-2026.vercel.app/">eCommerce Expo</a>
         </nav>
