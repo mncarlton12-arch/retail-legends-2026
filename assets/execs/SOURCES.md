@@ -8,6 +8,7 @@ folder. Unnamed delegation seats use the SEN-branded placeholder avatar
 | File | Person | Source | Confidence |
 |---|---|---|---|
 | `terry-lundgren.png` | Terry Lundgren — former Chairman & CEO, Macy's | speakersassociates.com/speaker/terry-lundgren/ (official speaker-bureau photo, 750×750) | High — visually confirmed |
+| `terry-lundgren-dark.png` | Terry Lundgren (portrait on navy, used on the dark-themed page) | Cropped July 12 2026 from SEN's own designer event card (Retail Legends Redesign/03_card_terry.png) | Highest — official event asset |
 | `lew-frankfort.jpg` | Lew Frankfort — former Chairman & CEO, Coach | lewfrankfort.com (his official personal site; recropped July 8 2026 from the 683×1024 original to a 560×560 face-centered square so circle avatars frame uniformly) | Highest — official portrait |
 | `vijay-talwar.jpg` | Vijay Talwar — Chief Digital, Data & Technology Officer, Avolta | worldretailcongress.com/speakers/vijay-talwar (WRC 2026 speaker page, 2646×2646) | High — Avolta role verified via WRC + Bloomberg |
 | `caroline-johns.jpg` | Caroline Johns — VP, Corporate Communications, Saatva | press-room.saatva.com/leadership/caroline-johns/ (official press room, 1024×1024) | Highest — company press page |

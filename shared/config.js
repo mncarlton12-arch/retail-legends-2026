@@ -58,7 +58,7 @@ window.SEN_CONFIG = {
     fullTitle: "Retail Legends: An Evening with the Architects of Modern Retail",
     theme: "Where Legends Share, Leaders Inspire.",
     date: "September 15, 2026",
-    time: "5:30 – 9:00 PM", // confirmed by Maria, July 8 2026 (matches the previously published hub)
+    time: "6:00 – 9:00 PM", // updated by Maria, July 12 2026 (was 5:30–9:00)
     city: "New York City",
     venue: null, // TODO: venue not booked yet — page shows "Venue announced upon confirmation"
     lumaUrl: "https://luma.com/96gvc9ig",
@@ -75,7 +75,7 @@ window.SEN_CONFIG = {
         title: "Former Chairman & CEO",
         company: "Macy's, Inc.",
         status: "confirmed",
-        image: "assets/execs/terry-lundgren.png", // see assets/execs/SOURCES.md
+        image: "assets/execs/terry-lundgren-dark.png", // portrait-on-navy from the official event card; see assets/execs/SOURCES.md
         imageAlt: "Portrait of Terry Lundgren, former Chairman and CEO of Macy's, Inc.",
         brandName: "Macy's",
         brandLogo: "assets/brands/macys.svg",

@@ -15,9 +15,6 @@
     meta.innerHTML = parts.map(esc).join(' <span class="dot" aria-hidden="true">&middot;</span> ');
   }
 
-  const theme = document.getElementById("hero-theme");
-  if (theme) theme.textContent = "“" + RL.theme + "”";
-
   /* Typographic fallback used when a brand logo file is absent/missing */
   function brandMark(logo, name, imgClass, textClass) {
     if (!logo) {
@@ -44,8 +41,10 @@
       card.className = "profile reveal";
       card.innerHTML = `
         <img class="profile__photo" src="${esc(s.image)}" alt="${esc(s.imageAlt)}" loading="lazy" />
+        <p class="profile__kicker">Speaker</p>
         <h3 class="profile__name">${esc(s.name)}</h3>
-        <p class="profile__title">${esc(s.title)}, ${esc(s.company)}</p>
+        <p class="profile__title">${esc(s.title)}</p>
+        <p class="profile__company">${esc(s.company)}</p>
         <p class="profile__bio">${esc(s.bio)}</p>`;
       card.insertBefore(
         brandMark(s.brandLogo, s.brandName || s.company, "profile__brand", "profile__brandtext"),
