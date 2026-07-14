@@ -11,7 +11,7 @@ at the same filename to update the site.
 |---|---|
 | macys.svg | upload.wikimedia.org/wikipedia/commons/a/a2/Macys_logo.svg |
 | coach.svg | upload.wikimedia.org/wikipedia/commons/b/bb/Coach_New_Logo.svg |
-| g-star-raw.svg | upload.wikimedia.org/wikipedia/commons/4/4c/G-Star_logo.svg |
+| gstar.svg / gstar.png | Official current G-STAR wordmark (provided by Maria, July 2026). Company rebranded from "G-Star RAW" to "G-STAR" — all caps, "RAW" dropped. Replaces the retired g-star-raw.svg. |
 | david-yurman.svg | upload.wikimedia.org/wikipedia/commons/5/5a/David_Yurman_wordmark.svg |
 | under-armour.svg | upload.wikimedia.org/wikipedia/commons/4/44/Under_armour_logo.svg |
 | tapestry.svg | upload.wikimedia.org/wikipedia/commons/2/21/Tapestry_logo.svg |
